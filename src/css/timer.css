@@ -1,0 +1,11 @@
+.timer {
+    display: flex;
+    padding-top: 30px;
+    gap: 30px;
+}
+
+.value{
+    display: block;
+    text-align: center;
+    font-size: xx-large;
+}
