@@ -10,7 +10,7 @@ function onFormSubmit(evt) {
   } = evt.currentTarget;
 
   for (
-    i = 1, j = Number(delay.value);
+    const i = 1, j = Number(delay.value);
     i <= amount.value;
     i += 1, j += Number(step.value)
   ) {
@@ -23,9 +23,13 @@ function createPromise(position, delay) {
     setTimeout(() => {
       const shouldResolve = Math.random() > 0.3;
       if (shouldResolve) {
-        Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
+        Notiflix.Notify.success(
+          `✅ Fulfilled promise ${position} in ${delay}ms`
+        );
       } else {
-        Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
+        Notiflix.Notify.failure(
+          `❌ Rejected promise ${position} in ${delay}ms`
+        );
       }
     }, delay);
   });
