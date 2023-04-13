@@ -10,7 +10,7 @@ function onFormSubmit(evt) {
   } = evt.currentTarget;
 
   for (
-    const i = 1, j = Number(delay.value);
+    let i = 1, j = Number(delay.value);
     i <= amount.value;
     i += 1, j += Number(step.value)
   ) {
