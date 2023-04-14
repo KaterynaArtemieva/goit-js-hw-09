@@ -9,10 +9,10 @@ btnStart.addEventListener('click', onBtnStartClick);
 btnStop.addEventListener('click', onBtnStopClick);
 
 function onBtnStartClick() {
+  btnStart.setAttribute('disabled', 'disabled');
+  btnStop.removeAttribute('disabled');
   id = setInterval(() => {
     body.style.backgroundColor = getRandomHexColor();
-    btnStart.setAttribute('disabled', 'disabled');
-    btnStop.removeAttribute('disabled');
   }, 1000);
 }
 

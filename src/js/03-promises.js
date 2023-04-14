@@ -16,6 +16,7 @@ function onFormSubmit(evt) {
   ) {
     createPromise(i, j);
   }
+  evt.target.reset();
 }
 
 function createPromise(position, delay) {

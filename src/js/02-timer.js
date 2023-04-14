@@ -23,6 +23,8 @@ const options = {
       btnStart.addEventListener('click', onBtnStartClick);
     }
     function onBtnStartClick() {
+      inputDate.setAttribute('disabled', 'disabled');
+      btnStart.setAttribute('disabled', 'disabled');
       setInterval(() => {
         const currentDate = new Date();
         if (selectedDates[0] >= currentDate) {
@@ -40,6 +42,8 @@ const options = {
             convertMs(difDate).seconds.toString()
           );
         } else {
+          inputDate.removeAttribute('disabled');
+          btnStart.removeAttribute('disabled');
           return;
         }
       }, 1000);
